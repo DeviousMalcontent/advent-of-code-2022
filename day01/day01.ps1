@@ -14,8 +14,6 @@ for ($i=0; $i -lt $arrayFromFile.Length; $i++) {
 	}
 }
 echo "------------------------------------------"
-#$arrayThatHoldsTheTotalCaloriesForEachElf.ToArray() | out-null
-$arrayThatHoldsTheTotalCaloriesForEachElf.ToArray() | sort
-#for ($k=0; $k -lt $arrayThatHoldsTheTotalCaloriesForEachElf.Length; $k++) {
-#	$arrayThatHoldsTheTotalCaloriesForEachElf[$k]
-#}
+$arrayThatHoldsTheTotalCaloriesForEachElf = $arrayThatHoldsTheTotalCaloriesForEachElf.ToArray() | sort
+$Answer = $arrayThatHoldsTheTotalCaloriesForEachElf[$arrayThatHoldsTheTotalCaloriesForEachElf.Length-1]
+echo "Answer: $Answer"
